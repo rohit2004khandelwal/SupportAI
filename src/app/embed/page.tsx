@@ -1,13 +1,13 @@
-import DashboardClient from '@/components/DashboardClient'
+import EmbedClient from '@/components/EmbedClient'
 import { getSession } from '@/lib/getSession'
 import React from 'react'
 
 async function page() {
     const session=await getSession()
-       
+
   return (
     <>
-      <DashboardClient ownerId={session?.user?.id!}/>
+      <EmbedClient ownerId={session?.user?.id!}/>
     </>
   )
 }
